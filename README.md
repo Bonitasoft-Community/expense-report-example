@@ -5,7 +5,7 @@ Please follow our getting started videos to learn how to create such a process.
 Install this example process by importing the <a href="https://github.com/Bonitasoft-Community/expense-report-example/releases">provided</a> *.bos* file in your Bonita BPM Studio.
 
 **Note:** this simplified version of an Expense Report process only uses one actor.<br/>
-The same user can fill an expense report and and approve it himself.
+The same user can fill an expense report and approve it himself.
 
 ## Screenshots
 #### Process Diagram
