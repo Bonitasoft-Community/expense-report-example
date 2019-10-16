@@ -94,10 +94,8 @@
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a9FZYOqrEemVR-MSSwBHSg" documentation="Manager approved the expense report" name="Yes" target="_a9ELQOqrEemVR-MSSwBHSg" source="_a9DkMOqrEemVR-MSSwBHSg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_a9FZYeqrEemVR-MSSwBHSg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_a9FZYuqrEemVR-MSSwBHSg" name="report - ExpenseReport#isIsApproved" content="isIsApproved" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_a9FZY-qrEemVR-MSSwBHSg" name="report" className="com.company.model.ExpenseReport">
-            <dataType xmi:type="process:BusinessObjectType" href="Create%20expense%20report-6.0.0.proc#_DSqBmO_DEeeqC8gnsZzn2Q"/>
-          </referencedElements>
+        <condition xmi:type="expression:Expression" xmi:id="_a9FZYuqrEemVR-MSSwBHSg" name="expenseReport - ExpenseReport#isIsApproved" content="isIsApproved" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BW1IwPANEemSfKdZy3mgfg" name="expenseReport" dataType="_Pab1xOqrEemVR-MSSwBHSg" className="com.company.model.ExpenseReport"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a9GAdeqrEemVR-MSSwBHSg" name="No" target="_a9Eyc-qrEemVR-MSSwBHSg" source="_a9DkMOqrEemVR-MSSwBHSg" isDefault="true">
