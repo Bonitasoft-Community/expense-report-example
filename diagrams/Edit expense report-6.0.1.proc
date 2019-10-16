@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_nqbBMOBDEemZQPyPcJEEEA" name="Edit expense report" version="6.0.0" author="antoine" bonitaVersion="7.9.4" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E34">
-    <elements xmi:type="process:Pool" xmi:id="_nqbBMeBDEemZQPyPcJEEEA" name="Edit expense report" version="6.0.0">
+  <process:MainProcess xmi:id="_nqbBMOBDEemZQPyPcJEEEA" name="Edit expense report" version="6.0.1" author="antoine" bonitaVersion="7.9.4" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E34">
+    <elements xmi:type="process:Pool" xmi:id="_nqbBMeBDEemZQPyPcJEEEA" name="Edit expense report" version="6.0.1">
       <elements xmi:type="process:Lane" xmi:id="_nqbBMuBDEemZQPyPcJEEEA" name="Employee lane" actor="_nqbBS-BDEemZQPyPcJEEEA">
         <elements xmi:type="process:StartEvent" xmi:id="_nqbBM-BDEemZQPyPcJEEEA" name="Update existing expense report" outgoing="_Mz20UOB4EemZQPyPcJEEEA">
           <textAnnotationAttachment xmi:type="process:TextAnnotationAttachment" xmi:id="_D8XPMOB4EemZQPyPcJEEEA" source="_D8GwgOB4EemZQPyPcJEEEA"/>
@@ -25,7 +25,7 @@
             </processSource>
           </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_TC6Xk-B4EemZQPyPcJEEEA" name="Review expense report" content="Review expense report" returnTypeFixed="true"/>
-          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_TC6XlOB4EemZQPyPcJEEEA" name="6.0.0" content="6.0.0" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_TC6XlOB4EemZQPyPcJEEEA" name="6.0.1" content="6.0.1" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:EndEvent" xmi:id="_UYUEQOB4EemZQPyPcJEEEA" name="End1" incoming="_UYaK4OB4EemZQPyPcJEEEA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_UYUrUOB4EemZQPyPcJEEEA" name="" content="" returnTypeFixed="true"/>

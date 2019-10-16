@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_DSpZ8O_DEeeqC8gnsZzn2Q" name="Create expense report" version="6.0.0" author="antoine" bonitaVersion="7.9.3" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E33">
-    <elements xmi:type="process:Pool" xmi:id="_DSqBAO_DEeeqC8gnsZzn2Q" documentation="This process allow an employee to submit an expense report. Information are stored in the business variable &quot;report&quot;. Report will be reviewed by manager of the employee. If report is rejected, employee can start another process to edit and resubmit it." name="Create expense report" version="6.0.0">
+  <process:MainProcess xmi:id="_DSpZ8O_DEeeqC8gnsZzn2Q" name="Create expense report" version="6.0.1" author="antoine" bonitaVersion="7.9.3" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E33">
+    <elements xmi:type="process:Pool" xmi:id="_DSqBAO_DEeeqC8gnsZzn2Q" documentation="This process allow an employee to submit an expense report. Information are stored in the business variable &quot;report&quot;. Report will be reviewed by manager of the employee. If report is rejected, employee can start another process to edit and resubmit it." name="Create expense report" version="6.0.1">
       <elements xmi:type="process:Lane" xmi:id="_DSqBAe_DEeeqC8gnsZzn2Q" name="Employee lane" actor="_DSqBeu_DEeeqC8gnsZzn2Q">
         <elements xmi:type="process:StartEvent" xmi:id="_DSqBAu_DEeeqC8gnsZzn2Q" name="Fill report" outgoing="_DSqBau_DEeeqC8gnsZzn2Q">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_DSqBBO_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
@@ -25,7 +25,7 @@
             </processSource>
           </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_1hapIOqqEemfe-qAZIUi1w" name="Review expense report" content="Review expense report"/>
-          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_1hZbBeqqEemfe-qAZIUi1w" name="6.0.0" content="6.0.0" returnTypeFixed="true"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_1hZbBeqqEemfe-qAZIUi1w" name="6.0.1" content="6.0.1" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:EndEvent" xmi:id="_2XD3sOqqEemfe-qAZIUi1w" name="End" incoming="_2XIwMOqqEemfe-qAZIUi1w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_2XEeweqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
