@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_Pab1kOqrEemVR-MSSwBHSg" name="Review expense report" version="6.0.1" author="antoine" bonitaVersion="7.9.4" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E34">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_Pab1kOqrEemVR-MSSwBHSg" name="Review expense report" version="6.0.1" author="antoine" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004" configId="ACED000574000E372E392E302D303032372E392E34">
     <elements xmi:type="process:Pool" xmi:id="_Pab1keqrEemVR-MSSwBHSg" name="Review expense report" version="6.0.1">
       <elements xmi:type="process:Lane" xmi:id="_Pab1kuqrEemVR-MSSwBHSg" name="Manager lane" actor="_a9EyUOqrEemVR-MSSwBHSg">
         <elements xmi:type="process:StartEvent" xmi:id="_Pab1k-qrEemVR-MSSwBHSg" name="Start" outgoing="_bZF_8OqrEemVR-MSSwBHSg">
@@ -73,10 +73,10 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_a9EyduqrEemVR-MSSwBHSg" name="" content="" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:TextAnnotation" xmi:id="_DiMm0OqsEemVR-MSSwBHSg" text="Process is start using a call activity in expense report creation or modification process"/>
-        <filters xmi:type="process:ActorFilter" xmi:id="_CnsQ8OqtEemVR-MSSwBHSg" documentation="The manager of the user who submit the expense report" name="Manager of expense report author" definitionId="user-manager" definitionVersion="1.0.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_CnsQ8eqtEemVR-MSSwBHSg" definitionId="user-manager" version="1.0.0">
+        <filters xmi:type="process:ActorFilter" xmi:id="_CnsQ8OqtEemVR-MSSwBHSg" documentation="The manager of the user who submit the expense report" name="Manager of expense report author" definitionId="bonita-actorfilter-user-manager" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_CnsQ8eqtEemVR-MSSwBHSg" definitionId="bonita-actorfilter-user-manager" version="1.0.0">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_CnsQ8uqtEemVR-MSSwBHSg" key="userId">
-              <expression xmi:type="expression:Expression" xmi:id="_CnsQ8-qtEemVR-MSSwBHSg" name="expenseReport - ExpenseReport#getCreatedBy" content="getCreatedBy" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Long" returnTypeFixed="true">
+              <expression xmi:type="expression:Expression" xmi:id="_CnsQ8-qtEemVR-MSSwBHSg" name="expenseReport - ExpenseReport#getCreatedBy" content="expenseReport.getCreatedBy()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
                 <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_CnsQ9OqtEemVR-MSSwBHSg" name="expenseReport" dataType="_Pab1xOqrEemVR-MSSwBHSg" className="com.company.model.ExpenseReport"/>
               </expression>
             </parameters>
@@ -94,21 +94,21 @@
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a9FZYOqrEemVR-MSSwBHSg" documentation="Manager approved the expense report" name="Yes" target="_a9ELQOqrEemVR-MSSwBHSg" source="_a9DkMOqrEemVR-MSSwBHSg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_a9FZYeqrEemVR-MSSwBHSg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_a9FZYuqrEemVR-MSSwBHSg" name="expenseReport - ExpenseReport#isIsApproved" content="isIsApproved" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
+        <condition xmi:type="expression:Expression" xmi:id="_a9FZYuqrEemVR-MSSwBHSg" name="expenseReport - ExpenseReport#isIsApproved" content="expenseReport.isIsApproved()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
           <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BW1IwPANEemSfKdZy3mgfg" name="expenseReport" dataType="_Pab1xOqrEemVR-MSSwBHSg" className="com.company.model.ExpenseReport"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a9GAdeqrEemVR-MSSwBHSg" name="No" target="_a9Eyc-qrEemVR-MSSwBHSg" source="_a9DkMOqrEemVR-MSSwBHSg" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_a9GAduqrEemVR-MSSwBHSg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_a9GAd-qrEemVR-MSSwBHSg" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_a9GAd-qrEemVR-MSSwBHSg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a9GAfeqrEemVR-MSSwBHSg" target="_a9DkMOqrEemVR-MSSwBHSg" source="_a9EyUeqrEemVR-MSSwBHSg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_a9GAfuqrEemVR-MSSwBHSg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_a9GAf-qrEemVR-MSSwBHSg" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_a9GAf-qrEemVR-MSSwBHSg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_bZF_8OqrEemVR-MSSwBHSg" target="_a9EyUeqrEemVR-MSSwBHSg" source="_Pab1k-qrEemVR-MSSwBHSg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_bZGnAOqrEemVR-MSSwBHSg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_bZGnAeqrEemVR-MSSwBHSg" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_bZGnAeqrEemVR-MSSwBHSg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_a9EyUOqrEemVR-MSSwBHSg" documentation="Manager who will review the expense report. Actor is actually override by an actor filter that select the employee manager." name="Manager actor"/>
       <contract xmi:type="process:Contract" xmi:id="_Pab1rOqrEemVR-MSSwBHSg"/>
@@ -145,13 +145,13 @@
   </process:MainProcess>
   <notation:Diagram xmi:id="_Pab1xeqrEemVR-MSSwBHSg" type="Process" element="_Pab1kOqrEemVR-MSSwBHSg" name="MyDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_Pab1xuqrEemVR-MSSwBHSg" type="2007" element="_Pab1keqrEemVR-MSSwBHSg">
-      <children xmi:type="notation:DecorationNode" xmi:id="_Pab1x-qrEemVR-MSSwBHSg" type="5008"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_Pab1yOqrEemVR-MSSwBHSg" type="7001">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Pab1x-qrEemVR-MSSwBHSg" type="5008" element="_Pab1keqrEemVR-MSSwBHSg"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Pab1yOqrEemVR-MSSwBHSg" type="7001" element="_Pab1keqrEemVR-MSSwBHSg">
         <children xmi:type="notation:Node" xmi:id="_Pab1yeqrEemVR-MSSwBHSg" type="3007" element="_Pab1kuqrEemVR-MSSwBHSg">
-          <children xmi:type="notation:DecorationNode" xmi:id="_Pab1yuqrEemVR-MSSwBHSg" type="5007"/>
-          <children xmi:type="notation:DecorationNode" xmi:id="_Pab1y-qrEemVR-MSSwBHSg" type="7002">
+          <children xmi:type="notation:DecorationNode" xmi:id="_Pab1yuqrEemVR-MSSwBHSg" type="5007" element="_Pab1kuqrEemVR-MSSwBHSg"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_Pab1y-qrEemVR-MSSwBHSg" type="7002" element="_Pab1kuqrEemVR-MSSwBHSg">
             <children xmi:type="notation:Shape" xmi:id="_Pab1z-qrEemVR-MSSwBHSg" type="3002" element="_Pab1k-qrEemVR-MSSwBHSg" fontName="Noto Sans">
-              <children xmi:type="notation:DecorationNode" xmi:id="_Pab10OqrEemVR-MSSwBHSg" type="5024">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Pab10OqrEemVR-MSSwBHSg" type="5024" element="_Pab1k-qrEemVR-MSSwBHSg">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_Pab10eqrEemVR-MSSwBHSg" y="5"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pab10uqrEemVR-MSSwBHSg" x="60" y="121"/>
@@ -179,7 +179,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a9EyeuqrEemVR-MSSwBHSg" x="641" y="100"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_DiOcAOqsEemVR-MSSwBHSg" type="3015" element="_DiMm0OqsEemVR-MSSwBHSg">
-              <children xmi:type="notation:DecorationNode" xmi:id="_DiPDEOqsEemVR-MSSwBHSg" type="5010"/>
+              <children xmi:type="notation:DecorationNode" xmi:id="_DiPDEOqsEemVR-MSSwBHSg" type="5010" element="_DiMm0OqsEemVR-MSSwBHSg"/>
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_DiOcAeqsEemVR-MSSwBHSg"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_DiOcAuqsEemVR-MSSwBHSg" fontName="Noto Sans"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_DiOcA-qsEemVR-MSSwBHSg"/>
@@ -222,7 +222,7 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a9GnhOqrEemVR-MSSwBHSg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_bZK4cOqrEemVR-MSSwBHSg" type="4001" element="_bZF_8OqrEemVR-MSSwBHSg" source="_Pab1z-qrEemVR-MSSwBHSg" target="_a9EycOqrEemVR-MSSwBHSg" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_bZLfgOqrEemVR-MSSwBHSg" type="6001">
+      <children xmi:type="notation:DecorationNode" xmi:id="_bZLfgOqrEemVR-MSSwBHSg" type="6001" element="_bZF_8OqrEemVR-MSSwBHSg">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_bZMGkOqrEemVR-MSSwBHSg" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_bZK4ceqrEemVR-MSSwBHSg" fontName="Noto Sans"/>

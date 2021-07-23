@@ -1,5 +1,5 @@
 # Expense Report Process
-This is an official Process example for Bonita 7.9.4 (or above)<br/>
+This is an official Process example for Bonita 2021.2 (or above)<br/>
 
 Install this example process by importing the <a href="https://github.com/Bonitasoft-Community/expense-report-example/releases">provided</a> *.bos* file in your Bonita Studio.
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<businessObjectModel modelVersion="1.0" productVersion="7.5.0.rc-02">
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.5.0.rc-02">
     <businessObjects>
         <businessObject qualifiedName="com.company.model.ExpenseReport">
             <description>Expense report</description>
@@ -13,7 +13,7 @@
             </fields>
             <uniqueConstraints/>
             <queries>
-                <query name="findRejectedByAuthor" content="SELECT e &#xA;FROM ExpenseReport e &#xA;WHERE e.isApproved = false&#xA;AND e.createdBy = :createdBy&#xA;ORDER BY e.persistenceId ASC" returnType="java.util.List">
+                <query name="findRejectedByAuthor" content="SELECT e &#10;FROM ExpenseReport e &#10;WHERE e.isApproved = false&#10;AND e.createdBy = :createdBy&#10;ORDER BY e.persistenceId ASC" returnType="java.util.List">
                     <queryParameters>
                         <queryParameter name="createdBy" className="java.lang.Long"/>
                     </queryParameters>
