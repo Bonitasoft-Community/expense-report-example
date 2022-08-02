@@ -1,8 +1,8 @@
 {
-  "previousArtifactVersion" : "1.8.29",
+  "modelVersion" : "2.3",
   "id" : "reviewExpenseReportCaseOverview",
   "name" : "reviewExpenseReportCaseOverview",
-  "lastUpdate" : 1659446658242,
+  "lastUpdate" : 1659453297973,
   "rows" : [
     [
       {
@@ -60,6 +60,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "39dc2fac-162e-414a-b268-5edc90d52de7",
@@ -96,6 +100,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "272c5d78-e5bc-4655-9796-ff9a0bf8c6b5",
@@ -325,6 +333,10 @@
                       "value" : {
                         "type" : "variable",
                         "value" : "caseOverview.selectedBusinessDataRef"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "b99d69e5-f4f1-421d-bd2e-490a2e7b1c71",
@@ -1165,6 +1177,13 @@
       "name" : "ui-bootstrap-tpls-0.13.0.min.js",
       "type" : "js",
       "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "5471c4a4-a115-431c-8202-59add21a2cf6",
+      "name" : "style9.css",
+      "type" : "css",
+      "order" : 14,
       "external" : false
     },
     {
