@@ -1,0 +1,19 @@
+== Migration notes (2 août 2022 à 15:20:39 CEST)
+
+=== Additions
+
+* Bonita projects are now Maven projects and rely on the https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html[Maven dependency mechanism] to manage their dependencies. Check the documentation for more information about https://www.bonitasoft.com/bos_redirect.php?bos_redirect_id=727&bos_redirect_major_version=7.15&bos_redirect_minor_version=0&bos_redirect_product=bos[Project composition].
+
+=== Updates
+
+* Groovy version has been updated from `2.4.x` to `3.0.x`
+* Only Java `11` version is now supported. This might impact your existing project if you were still using Java 8. Some dependencies in your project might be incompatible with the _Java Platform Module System_ introduced in Java 9.
+* Upgrade of java archives files into Maven dependencies:
+** `bonita-userfilter-user-manager-impl-1.0.0-SNAPSHOT.jar` file has been replaced by a remote Maven dependency with the following coordinates: `org.bonitasoft.actorfilter:bonita-actorfilter-user-manager:jar:1.0.0`
+** `bonita-userfilter-initiator-manager-impl-1.0.0-SNAPSHOT.jar` file has been replaced by a remote Maven dependency with the following coordinates: `org.bonitasoft.actorfilter:bonita-actorfilter-initiator-manager:jar:1.0.0`
+
+
+=== Removals
+
+* `lib` folder and its content has been removed.
+

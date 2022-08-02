@@ -18,7 +18,7 @@ input[type='number'].ng-invalid.ng-dirty, input[type='password'].ng-invalid.ng-d
 
 /* Add a red star after required inputs */
 .control-label--required:after {
-  content: "*";
+  content: " *";
   color: #C00;
 }
 .btn-invalid{
@@ -117,4 +117,243 @@ input[type='number'].ng-invalid.ng-dirty, input[type='password'].ng-invalid.ng-d
 .margin-left-sm { margin-left: .5em; }
 .margin-left-md { margin-left: 1em; }
 .margin-left-lg { margin-left: 1.5em; }
-.margin-left-xl { margin-left: 3em; }
+.margin-left-xl { margin-left: 3em; }.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
+.bonita-modal{
+    overflow-y: auto;
+}
+
+.modal-open .datepicker,
+.modal-open .timepicker {
+    z-index: 9999;
+}
