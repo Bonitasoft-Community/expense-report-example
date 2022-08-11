@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "1.9.24",
   "id" : "expenseReportReviewForm",
   "name" : "expenseReportReviewForm",
-  "lastUpdate" : 1659446501685,
+  "lastUpdate" : 1660210938412,
   "rows" : [
     [
       {
@@ -361,7 +361,7 @@
             "type" : "constant",
             "value" : [
               "label",
-              "cost | currency"
+              "cost"
             ]
           },
           "selectedRow" : {
