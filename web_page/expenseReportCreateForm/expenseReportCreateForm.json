@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "1.9.24",
   "id" : "expenseReportCreateForm",
   "name" : "expenseReportCreateForm",
-  "lastUpdate" : 1659446506689,
+  "lastUpdate" : 1660220591228,
   "rows" : [
     [
       {
@@ -409,58 +409,6 @@
                       "lg" : 4
                     },
                     "propertyValues" : {
-                      "alignment" : {
-                        "type" : "constant",
-                        "value" : "left"
-                      },
-                      "labelWidth" : {
-                        "type" : "constant",
-                        "value" : 2
-                      },
-                      "isDisplayed" : {
-                        "type" : "constant",
-                        "value" : true
-                      },
-                      "placeholder" : {
-                        "type" : "interpolation",
-                        "value" : "Provide a cost for this line"
-                      },
-                      "class" : {
-                        "type" : "constant",
-                        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
-                      },
-                      "label" : {
-                        "type" : "interpolation",
-                        "value" : "Cost"
-                      },
-                      "labelPosition" : {
-                        "type" : "constant",
-                        "value" : "left"
-                      },
-                      "type" : {
-                        "type" : "constant",
-                        "value" : "number"
-                      },
-                      "dimension" : {
-                        "type" : "constant",
-                        "value" : 12
-                      },
-                      "widgetId" : {
-                        "type" : "constant",
-                        "value" : "pbInput"
-                      },
-                      "value" : {
-                        "type" : "variable",
-                        "value" : "$item.cost"
-                      },
-                      "labelHidden" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "readonly" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
                       "cssClasses" : {
                         "type" : "constant",
                         "value" : ""
@@ -473,17 +421,37 @@
                         "type" : "constant",
                         "value" : false
                       },
-                      "minLength" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "maxLength" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
                       "readOnly" : {
                         "type" : "constant",
                         "value" : false
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Cost"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 2
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation",
+                        "value" : "Provide a cost for this line"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "$item.cost"
                       },
                       "min" : {
                         "type" : "constant",
@@ -492,18 +460,34 @@
                       "max" : {
                         "type" : "constant"
                       },
-                      "step" : {
+                      "maskCurrency" : {
                         "type" : "constant",
-                        "value" : 1
+                        "value" : "€"
                       },
-                      "allowHTML" : {
+                      "orientation" : {
                         "type" : "constant",
-                        "value" : true
+                        "value" : "right"
+                      },
+                      "indentation" : {
+                        "type" : "constant",
+                        "value" : "none"
+                      },
+                      "decimalSize" : {
+                        "type" : "constant",
+                        "value" : 2
+                      },
+                      "decimal" : {
+                        "type" : "constant",
+                        "value" : ","
+                      },
+                      "group" : {
+                        "type" : "constant",
+                        "value" : "whitespace"
                       }
                     },
-                    "reference" : "9d7b1af4-ad18-475f-b2a7-96ce3df01592",
+                    "reference" : "8a093e99-0c1c-482d-9f0c-863d5f04065b",
                     "hasValidationError" : false,
-                    "id" : "pbInput"
+                    "id" : "pbCurrencyInput"
                   },
                   {
                     "type" : "component",

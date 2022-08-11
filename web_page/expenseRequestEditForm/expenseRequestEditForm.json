@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "1.9.57",
   "id" : "expenseRequestEditForm",
   "name" : "expenseRequestEditForm",
-  "lastUpdate" : 1659446505187,
+  "lastUpdate" : 1660220578456,
   "rows" : [
     [
       {
@@ -747,6 +747,24 @@
                               "allowHTML" : {
                                 "type" : "constant",
                                 "value" : true
+                              },
+                              "minLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "maxLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "step" : {
+                                "type" : "constant",
+                                "value" : 1
                               }
                             },
                             "reference" : "9bac36bd-c407-4bc1-b131-90924004733a",
@@ -761,35 +779,23 @@
                               "xs" : 12
                             },
                             "propertyValues" : {
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
                               "cssClasses" : {
                                 "type" : "constant",
                                 "value" : ""
                               },
-                              "widgetId" : {
+                              "hidden" : {
                                 "type" : "constant",
-                                "value" : "pbInput"
+                                "value" : false
                               },
-                              "labelWidth" : {
+                              "required" : {
                                 "type" : "constant",
-                                "value" : 1
+                                "value" : true
                               },
                               "readOnly" : {
                                 "type" : "constant",
                                 "value" : false
                               },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Cost"
-                              },
-                              "type" : {
-                                "type" : "constant",
-                                "value" : "number"
-                              },
-                              "required" : {
+                              "allowHTML" : {
                                 "type" : "constant",
                                 "value" : true
                               },
@@ -797,37 +803,59 @@
                                 "type" : "constant",
                                 "value" : false
                               },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Cost"
+                              },
                               "labelPosition" : {
                                 "type" : "constant",
                                 "value" : "top"
                               },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 1
+                              },
                               "placeholder" : {
-                                "type" : "constant"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "left"
-                              },
-                              "class" : {
-                                "type" : "constant",
-                                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
+                                "type" : "interpolation"
                               },
                               "value" : {
                                 "type" : "variable",
                                 "value" : "$item.cost"
                               },
-                              "allowHTML" : {
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "maskCurrency" : {
                                 "type" : "constant",
-                                "value" : true
+                                "value" : "€"
+                              },
+                              "orientation" : {
+                                "type" : "constant",
+                                "value" : "right"
+                              },
+                              "indentation" : {
+                                "type" : "constant",
+                                "value" : "none"
+                              },
+                              "decimalSize" : {
+                                "type" : "constant",
+                                "value" : 2
+                              },
+                              "decimal" : {
+                                "type" : "constant",
+                                "value" : ","
+                              },
+                              "group" : {
+                                "type" : "constant",
+                                "value" : "whitespace"
                               }
                             },
-                            "reference" : "a20d506f-3cf5-4c47-83de-b3e130efd7b6",
+                            "reference" : "54137988-1b44-4027-8500-984b67555979",
                             "hasValidationError" : false,
-                            "id" : "pbInput"
+                            "id" : "pbCurrencyInput"
                           }
                         ],
                         [
@@ -1126,55 +1154,6 @@
                   "xs" : 12
                 },
                 "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Default label"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Expense report: {{expenseReport | json}}"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  }
-                },
-                "reference" : "92d4d4e0-53ce-4e9c-8d6b-28b7892e8e6c",
-                "hasValidationError" : false,
-                "id" : "pbText"
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12
-                },
-                "propertyValues" : {
                   "allowHTML" : {
                     "type" : "constant",
                     "value" : true
@@ -1217,6 +1196,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "83694860-4d61-4187-a3fd-3b786f04ee65",
