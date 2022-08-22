@@ -29,8 +29,8 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>com.bonitasoft.engine</groupId>
-      <artifactId>bonita-common-sp</artifactId>
+      <groupId>org.bonitasoft.engine</groupId>
+      <artifactId>bonita-common</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
