@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "1.9.24",
   "id" : "expenseReportReviewForm",
   "name" : "expenseReportReviewForm",
-  "lastUpdate" : 1664987138776,
+  "lastUpdate" : 1664987975410,
   "rows" : [
     [
       {
@@ -320,7 +320,7 @@
           "xs" : 12,
           "sm" : 12,
           "md" : 12,
-          "lg" : 12
+          "lg" : 6
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -335,7 +335,7 @@
             "type" : "variable"
           }
         },
-        "reference" : "9f098693-5b5c-4ced-9067-05fda55d0ede",
+        "reference" : "a93a026f-fec0-4bd2-ac8d-2534264c9497",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -368,12 +368,40 @@
               "rows" : [
                 [
                   {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "9cadd49b-d2bb-4f9c-8701-f1fdc2e59ae8",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
                     "type" : "component",
                     "dimension" : {
                       "xs" : 12,
                       "sm" : 12,
                       "lg" : 4,
-                      "md" : 6
+                      "md" : 4
                     },
                     "propertyValues" : {
                       "cssClasses" : {
@@ -452,7 +480,7 @@
                       "xs" : 12,
                       "sm" : 12,
                       "lg" : 4,
-                      "md" : 6
+                      "md" : 4
                     },
                     "propertyValues" : {
                       "cssClasses" : {
