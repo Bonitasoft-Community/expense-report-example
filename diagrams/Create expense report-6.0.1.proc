@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_DSpZ8O_DEeeqC8gnsZzn2Q" name="Create expense report" version="6.0.1" author="antoine" bonitaVersion="7.9.3" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E33">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_DSpZ8O_DEeeqC8gnsZzn2Q" name="Create expense report" version="6.0.1" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_DSqBAO_DEeeqC8gnsZzn2Q" documentation="This process allow an employee to submit an expense report. Information are stored in the business variable &quot;report&quot;. Report will be reviewed by manager of the employee. If report is rejected, employee can start another process to edit and resubmit it." name="Create expense report" version="6.0.1">
       <elements xmi:type="process:Lane" xmi:id="_DSqBAe_DEeeqC8gnsZzn2Q" name="Employee lane" actor="_DSqBeu_DEeeqC8gnsZzn2Q">
         <elements xmi:type="process:StartEvent" xmi:id="_DSqBAu_DEeeqC8gnsZzn2Q" name="Fill report" outgoing="_DSqBau_DEeeqC8gnsZzn2Q">
@@ -32,8 +32,8 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_2XEewOqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_2XEewuqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <filters xmi:type="process:ActorFilter" xmi:id="_Nb2MwOBJEemZQPyPcJEEEA" documentation="Assign the tasks to the manager of the employee who submitted the expense report." name="Manager of the employee" definitionId="initiator-manager" definitionVersion="1.0.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Nb2MweBJEemZQPyPcJEEEA" definitionId="initiator-manager" version="1.0.0">
+        <filters xmi:type="process:ActorFilter" xmi:id="_Nb2MwOBJEemZQPyPcJEEEA" documentation="Assign the tasks to the manager of the employee who submitted the expense report." name="Manager of the employee" definitionId="bonita-actorfilter-initiator-manager" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Nb2MweBJEemZQPyPcJEEEA" definitionId="bonita-actorfilter-initiator-manager" version="1.0">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Nb2MwuBJEemZQPyPcJEEEA" key="autoAssign">
               <expression xmi:type="expression:Expression" xmi:id="_Nb2Mw-BJEemZQPyPcJEEEA" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
             </parameters>
@@ -55,11 +55,11 @@
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_DSqBau_DEeeqC8gnsZzn2Q" target="_1hZbAOqqEemfe-qAZIUi1w" source="_DSqBAu_DEeeqC8gnsZzn2Q">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_DSqBa-_DEeeqC8gnsZzn2Q"/>
-        <condition xmi:type="expression:Expression" xmi:id="_DSqBbO_DEeeqC8gnsZzn2Q" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_DSqBbO_DEeeqC8gnsZzn2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_2XIwMOqqEemfe-qAZIUi1w" target="_2XD3sOqqEemfe-qAZIUi1w" source="_1hZbAOqqEemfe-qAZIUi1w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_2XJXQOqqEemfe-qAZIUi1w"/>
-        <condition xmi:type="expression:Expression" xmi:id="_2XJXQeqqEemfe-qAZIUi1w" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_2XJXQeqqEemfe-qAZIUi1w" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_DSqBeu_DEeeqC8gnsZzn2Q" documentation="Employee who will submit the expense report." name="Employee actor" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_4CHPEOBIEemZQPyPcJEEEA" documentation="Manager who will review the expense report. Actor is actually override by an actor filter that select the employee manager." name="Manager actor"/>
@@ -130,11 +130,11 @@
           <children xmi:type="notation:DecorationNode" xmi:id="_DSqBre_DEeeqC8gnsZzn2Q" type="5007" element="_DSqBKO_DEeeqC8gnsZzn2Q"/>
           <children xmi:type="notation:DecorationNode" xmi:id="_DSqBru_DEeeqC8gnsZzn2Q" type="7002" element="_DSqBKO_DEeeqC8gnsZzn2Q">
             <children xmi:type="notation:Shape" xmi:id="_1haCEOqqEemfe-qAZIUi1w" type="3063" element="_1hZbAOqqEemfe-qAZIUi1w" fontName="Noto Sans" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_1haCEuqqEemfe-qAZIUi1w" type="5093"/>
+              <children xmi:type="notation:DecorationNode" xmi:id="_1haCEuqqEemfe-qAZIUi1w" type="5093" element="_1hZbAOqqEemfe-qAZIUi1w"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1haCEeqqEemfe-qAZIUi1w" x="160" y="79" width="186" height="93"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_2XFF0OqqEemfe-qAZIUi1w" type="3003" element="_2XD3sOqqEemfe-qAZIUi1w" fontName="Noto Sans">
-              <children xmi:type="notation:DecorationNode" xmi:id="_2XFs4OqqEemfe-qAZIUi1w" type="5025">
+              <children xmi:type="notation:DecorationNode" xmi:id="_2XFs4OqqEemfe-qAZIUi1w" type="5025" element="_2XD3sOqqEemfe-qAZIUi1w">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_2XFs4eqqEemfe-qAZIUi1w" y="5"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2XFF0eqqEemfe-qAZIUi1w" x="412" y="86"/>
@@ -162,7 +162,7 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DSqBye_DEeeqC8gnsZzn2Q" points="[-1, 14, -136, -132]$[-1, 153, -136, 7]$[85, 153, -50, 7]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_2XJ-UOqqEemfe-qAZIUi1w" type="4001" element="_2XIwMOqqEemfe-qAZIUi1w" source="_1haCEOqqEemfe-qAZIUi1w" target="_2XFF0OqqEemfe-qAZIUi1w" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_2XJ-U-qqEemfe-qAZIUi1w" type="6001">
+      <children xmi:type="notation:DecorationNode" xmi:id="_2XJ-U-qqEemfe-qAZIUi1w" type="6001" element="_2XIwMOqqEemfe-qAZIUi1w">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_2XJ-VOqqEemfe-qAZIUi1w" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_2XJ-UeqqEemfe-qAZIUi1w" fontName="Noto Sans"/>
