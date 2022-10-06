@@ -226,7 +226,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_bZMGkOqrEemVR-MSSwBHSg" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_bZK4ceqrEemVR-MSSwBHSg" fontName="Noto Sans"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bZK4cuqrEemVR-MSSwBHSg" points="[-7, -1, -261, -21]$[304, 21, 50, 1]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bZK4cuqrEemVR-MSSwBHSg" points="[-1, -13, -130, -1]$[79, -13, -50, -1]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bZUpcOqrEemVR-MSSwBHSg" id="(1.0,0.9)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_DiVJsOqsEemVR-MSSwBHSg" type="4003" element="_DiT7kOqsEemVR-MSSwBHSg" source="_DiOcAOqsEemVR-MSSwBHSg" target="_Pab1z-qrEemVR-MSSwBHSg">
