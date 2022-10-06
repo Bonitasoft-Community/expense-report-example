@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.9.57",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "expenseRequestEditForm",
   "name" : "expenseRequestEditForm",
-  "lastUpdate" : 1627033007578,
+  "lastUpdate" : 1665062681947,
   "rows" : [
     [
       {
@@ -65,6 +65,10 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "f6834727-ec19-4854-b6ad-01965f9633f6",
@@ -150,6 +154,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "f87ac48f-d53e-4e1d-8d07-4c066e0e57c9",
@@ -295,6 +303,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "bd49954a-c03c-43d3-8338-5df153263a59",
@@ -545,6 +557,10 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "expenseReport.summary"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "9b5476d1-3c02-4ee1-8de4-ae75ab27dc6f",
@@ -601,6 +617,10 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "3eb6428e-d86e-486d-875e-89f50c03c266",
@@ -723,6 +743,10 @@
                               "value" : {
                                 "type" : "variable",
                                 "value" : "$item.label"
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
                               }
                             },
                             "reference" : "9bac36bd-c407-4bc1-b131-90924004733a",
@@ -737,35 +761,23 @@
                               "xs" : 12
                             },
                             "propertyValues" : {
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
                               "cssClasses" : {
                                 "type" : "constant",
                                 "value" : ""
                               },
-                              "widgetId" : {
+                              "hidden" : {
                                 "type" : "constant",
-                                "value" : "pbInput"
+                                "value" : false
                               },
-                              "labelWidth" : {
+                              "required" : {
                                 "type" : "constant",
-                                "value" : 1
+                                "value" : true
                               },
                               "readOnly" : {
                                 "type" : "constant",
                                 "value" : false
                               },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Cost"
-                              },
-                              "type" : {
-                                "type" : "constant",
-                                "value" : "number"
-                              },
-                              "required" : {
+                              "allowHTML" : {
                                 "type" : "constant",
                                 "value" : true
                               },
@@ -773,33 +785,59 @@
                                 "type" : "constant",
                                 "value" : false
                               },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Cost"
+                              },
                               "labelPosition" : {
                                 "type" : "constant",
                                 "value" : "top"
                               },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 1
+                              },
                               "placeholder" : {
-                                "type" : "constant"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "left"
-                              },
-                              "class" : {
-                                "type" : "constant",
-                                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
+                                "type" : "interpolation"
                               },
                               "value" : {
                                 "type" : "variable",
                                 "value" : "$item.cost"
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "maskCurrency" : {
+                                "type" : "constant",
+                                "value" : "€"
+                              },
+                              "orientation" : {
+                                "type" : "constant",
+                                "value" : "right"
+                              },
+                              "indentation" : {
+                                "type" : "constant",
+                                "value" : "none"
+                              },
+                              "decimalSize" : {
+                                "type" : "constant",
+                                "value" : 2
+                              },
+                              "decimal" : {
+                                "type" : "constant",
+                                "value" : ","
+                              },
+                              "group" : {
+                                "type" : "constant",
+                                "value" : "whitespace"
                               }
                             },
-                            "reference" : "a20d506f-3cf5-4c47-83de-b3e130efd7b6",
+                            "reference" : "541b8a04-56c6-4380-873e-c5d5063b8be4",
                             "hasValidationError" : false,
-                            "id" : "pbInput"
+                            "id" : "pbCurrencyInput"
                           }
                         ],
                         [
@@ -877,6 +915,10 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
                               }
                             },
                             "reference" : "5c247b2c-6dc6-44ac-b737-0edc2380e9e6",
@@ -961,6 +1003,10 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "4a51b7e2-aada-4b85-8298-5f4d89599f14",
@@ -1072,6 +1118,10 @@
                   "modalId" : {
                     "type" : "constant",
                     "value" : ""
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "81caceec-4414-48c8-92d7-e0bf36c4eb8b",

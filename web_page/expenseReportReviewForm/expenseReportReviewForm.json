@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.9.24",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "expenseReportReviewForm",
   "name" : "expenseReportReviewForm",
-  "lastUpdate" : 1627033007513,
+  "lastUpdate" : 1665062851897,
   "rows" : [
     [
       {
@@ -31,6 +31,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "center"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "82529a97-6b8b-4f8b-ae93-4a8e0958e62e",
@@ -101,6 +105,10 @@
           },
           "max" : {
             "type" : "constant"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "b353e34f-7977-43d3-9bd4-605684351737",
@@ -171,6 +179,10 @@
           },
           "max" : {
             "type" : "constant"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "20dc73b0-913e-4826-9b55-f0e59284d015",
@@ -245,6 +257,10 @@
           "step" : {
             "type" : "constant",
             "value" : 1
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "1b542c87-04be-4da8-9d10-7f133c2de671",
@@ -278,6 +294,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "410fb92d-9ab4-4f8f-923b-7dca6379018c",
@@ -289,7 +309,10 @@
       {
         "type" : "container",
         "dimension" : {
-          "xs" : 2
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 8
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -301,73 +324,240 @@
             "value" : false
           },
           "repeatedCollection" : {
-            "type" : "expression",
-            "value" : ""
+            "type" : "variable"
           }
         },
-        "reference" : "e09fb700-418b-42db-b0f2-ac15aefac2e6",
+        "reference" : "9317376d-7112-4d90-af6a-fe5421db32e0",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
-          [ ]
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : "report.lines"
+                }
+              },
+              "reference" : "c1ad5069-405b-48d4-bf50-4ff85cc32958",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "3a44c3ec-6e9f-45c1-b8fc-7d395bff0b7e",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [ ]
+                    ]
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "minLength" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "maxLength" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "readOnly" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Default label"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "$item.label"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "text"
+                      },
+                      "min" : {
+                        "type" : "constant"
+                      },
+                      "max" : {
+                        "type" : "constant"
+                      },
+                      "step" : {
+                        "type" : "constant",
+                        "value" : 1
+                      }
+                    },
+                    "reference" : "6613a643-88cf-4e09-89ef-d6a0ac07e1d7",
+                    "hasValidationError" : false,
+                    "id" : "pbInput"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 4,
+                      "lg" : 4
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "required" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "readOnly" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Amount"
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      },
+                      "placeholder" : {
+                        "type" : "interpolation"
+                      },
+                      "value" : {
+                        "type" : "variable",
+                        "value" : "$item.cost"
+                      },
+                      "min" : {
+                        "type" : "constant"
+                      },
+                      "max" : {
+                        "type" : "constant"
+                      },
+                      "maskCurrency" : {
+                        "type" : "constant",
+                        "value" : "€"
+                      },
+                      "orientation" : {
+                        "type" : "constant",
+                        "value" : "right"
+                      },
+                      "indentation" : {
+                        "type" : "constant",
+                        "value" : "none"
+                      },
+                      "decimalSize" : {
+                        "type" : "constant",
+                        "value" : 2
+                      },
+                      "decimal" : {
+                        "type" : "constant",
+                        "value" : ","
+                      },
+                      "group" : {
+                        "type" : "constant",
+                        "value" : "whitespace"
+                      }
+                    },
+                    "reference" : "cfe33f0f-2147-4661-aca5-79c77ea6c40c",
+                    "hasValidationError" : false,
+                    "id" : "pbCurrencyInput"
+                  }
+                ]
+              ]
+            }
+          ]
         ]
-      },
-      {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 8
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "headers" : {
-            "type" : "constant",
-            "value" : [
-              "Label",
-              "Cost"
-            ]
-          },
-          "content" : {
-            "type" : "expression",
-            "value" : "report.lines"
-          },
-          "columnsKey" : {
-            "type" : "constant",
-            "value" : [
-              "label",
-              "cost | currency"
-            ]
-          },
-          "selectedRow" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "striped" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "condensed" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "bordered" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "d40adcf8-9433-432e-920f-d18273815d6a",
-        "hasValidationError" : false,
-        "id" : "pbTable"
       }
     ],
     [
@@ -466,6 +656,10 @@
                   "value" : {
                     "type" : "variable",
                     "value" : "comments"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "558b6bf3-8d88-4d29-8db2-7fe5fbe0dfa7",
@@ -535,6 +729,10 @@
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
                     "value" : "/bonita"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "e4fe86fb-d954-43e1-a001-e8a5c9ad146e",
@@ -602,6 +800,10 @@
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
                     "value" : "/bonita"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "9c0cdf28-88eb-489c-a2a8-889fb521e02a",
