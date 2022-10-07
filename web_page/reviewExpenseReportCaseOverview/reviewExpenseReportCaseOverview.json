@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.9.24",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "reviewExpenseReportCaseOverview",
   "name" : "reviewExpenseReportCaseOverview",
-  "lastUpdate" : 1627034897037,
+  "lastUpdate" : 1665062324012,
   "rows" : [
     [
       {
@@ -61,6 +61,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "39dc2fac-162e-414a-b268-5edc90d52de7",
@@ -97,6 +101,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "272c5d78-e5bc-4655-9796-ff9a0bf8c6b5",
@@ -326,6 +334,10 @@
                       "value" : {
                         "type" : "variable",
                         "value" : "caseOverview.selectedBusinessDataRef"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "b99d69e5-f4f1-421d-bd2e-490a2e7b1c71",

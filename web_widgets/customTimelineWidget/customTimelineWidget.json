@@ -1,6 +1,6 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.4.18",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "properties" : [
     {
       "label" : "Events",
@@ -112,7 +112,7 @@
   ],
   "id" : "customTimelineWidget",
   "name" : "timelineWidget",
-  "lastUpdate" : 1627033561015,
+  "lastUpdate" : 1665062323867,
   "template" : "@customTimelineWidget.tpl.html",
   "controller" : "@customTimelineWidget.ctrl.js",
   "custom" : true,

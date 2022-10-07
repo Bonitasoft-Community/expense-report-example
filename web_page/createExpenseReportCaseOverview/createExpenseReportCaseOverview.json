@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.9.24",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "createExpenseReportCaseOverview",
   "name" : "createExpenseReportCaseOverview",
-  "lastUpdate" : 1627035008626,
+  "lastUpdate" : 1665062323871,
   "rows" : [
     [
       {
@@ -61,6 +61,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "043d6afb-254c-4d03-8bec-80a6b16deb38",
@@ -97,6 +101,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "c8c7d108-df9e-4a39-9be3-5cdb139ee84d",
@@ -326,6 +334,10 @@
                       "value" : {
                         "type" : "variable",
                         "value" : "caseOverview.selectedBusinessDataRef"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "3bf19cb3-f8b6-4862-89cf-613888bc712e",

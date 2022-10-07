@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "1.9.24",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "expenseReportReviewForm",
   "name" : "expenseReportReviewForm",
-  "lastUpdate" : 1627033007513,
+  "lastUpdate" : 1665068248028,
   "rows" : [
     [
       {
@@ -31,6 +31,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "center"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "82529a97-6b8b-4f8b-ae93-4a8e0958e62e",
@@ -101,6 +105,10 @@
           },
           "max" : {
             "type" : "constant"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "b353e34f-7977-43d3-9bd4-605684351737",
@@ -171,6 +179,10 @@
           },
           "max" : {
             "type" : "constant"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "20dc73b0-913e-4826-9b55-f0e59284d015",
@@ -245,6 +257,10 @@
           "step" : {
             "type" : "constant",
             "value" : 1
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "1b542c87-04be-4da8-9d10-7f133c2de671",
@@ -254,42 +270,12 @@
     ],
     [
       {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "text" : {
-            "type" : "interpolation",
-            "value" : "Lines"
-          },
-          "level" : {
-            "type" : "constant",
-            "value" : "Level 4"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "left"
-          }
-        },
-        "reference" : "410fb92d-9ab4-4f8f-923b-7dca6379018c",
-        "hasValidationError" : false,
-        "id" : "pbTitle"
-      }
-    ],
-    [
-      {
         "type" : "container",
         "dimension" : {
-          "xs" : 2
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 2,
+          "lg" : 2
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -301,11 +287,10 @@
             "value" : false
           },
           "repeatedCollection" : {
-            "type" : "expression",
-            "value" : ""
+            "type" : "variable"
           }
         },
-        "reference" : "e09fb700-418b-42db-b0f2-ac15aefac2e6",
+        "reference" : "fa5eae6e-5a05-47ca-8651-329aef5acf1b",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -315,7 +300,10 @@
       {
         "type" : "component",
         "dimension" : {
-          "xs" : 8
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 10,
+          "lg" : 10
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -323,6 +311,10 @@
             "value" : ""
           },
           "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
             "type" : "constant",
             "value" : false
           },
@@ -341,16 +333,11 @@
             "type" : "constant",
             "value" : [
               "label",
-              "cost | currency"
+              "cost | currency:\"€\""
             ]
           },
           "selectedRow" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : false
+            "type" : "variable"
           },
           "striped" : {
             "type" : "constant",
@@ -365,7 +352,7 @@
             "value" : false
           }
         },
-        "reference" : "d40adcf8-9433-432e-920f-d18273815d6a",
+        "reference" : "457ce3ab-523d-4b08-b0a4-187f22f0616b",
         "hasValidationError" : false,
         "id" : "pbTable"
       }
@@ -461,11 +448,15 @@
                   },
                   "labelWidth" : {
                     "type" : "constant",
-                    "value" : 4
+                    "value" : 2
                   },
                   "value" : {
                     "type" : "variable",
                     "value" : "comments"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "558b6bf3-8d88-4d29-8db2-7fe5fbe0dfa7",
@@ -535,6 +526,10 @@
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
                     "value" : "/bonita"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "e4fe86fb-d954-43e1-a001-e8a5c9ad146e",
@@ -602,6 +597,10 @@
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
                     "value" : "/bonita"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "9c0cdf28-88eb-489c-a2a8-889fb521e02a",
