@@ -2,7 +2,7 @@
 # Output of source code compilation.
 # For example Bonita includes helper Groovy classes such as BonitaUsers (with for example getProcessInstanceInitiator method).
 # Sources (e.g. BonitaUsers.groovy) are located in src-providedGroovy folder and build result (e.g. BonitaUsers.class) is located in bin folder.
-/bin
+bin
 
 # BDM jar generated from the BDM definition (bom.xml)
 /lib/bdm-client-pojo.jar
@@ -39,9 +39,12 @@
 # Web component user individual preferences (e.g. bookmarked,...).
 /web_widgets/.metadata
 /web_page/.metadata
+/web_fragments/.metadata
 
 # Output of web component build
+/web_fragments/*/*.js
 /web_widgets/*/*.js
+!/web_widgets/*/*.ctrl.js
 /web_page/*/js
 
 # Web widgets provided by Bonita in the UI Designer.
@@ -71,11 +74,6 @@ target/
 **/.idea/**/gradle.xml
 
 
-bin
 /template
-/process_configurations
 node/
 node_modules/
-/web_fragments/.metadata
-/web_fragments/*/*.js
-!/web_widgets/*/*.ctrl.js
