@@ -5,7 +5,7 @@
   <groupId>org.bonitasoft.example</groupId>
   <artifactId>expense-report-example</artifactId>
   <version>6.0.1</version>
-  <name>expense-report-example2</name>
+  <name>expense-report-example</name>
   <description>Official Expense Report Process example for Bonita</description>
   <properties>
     <bonita.runtime.version>7.15.0</bonita.runtime.version>
