@@ -4,9 +4,9 @@
   "displayName" : "editExpenseReportCaseOverview",
   "type" : "page",
   "uuid" : "9b9261da-ade4-40ae-a707-2658ccb13790",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036327092,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103679,
   "description" : "List all business data related to the root case. List all the tasks done by the participants so far as well as the pending ones.",
   "rows" : [
     [

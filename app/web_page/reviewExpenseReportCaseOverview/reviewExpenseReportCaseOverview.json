@@ -4,9 +4,9 @@
   "displayName" : "reviewExpenseReportCaseOverview",
   "type" : "page",
   "uuid" : "b9551e61-b07a-40f6-a368-711b4c57f8c7",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036327245,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103888,
   "description" : "List all business data related to the root case. List all the tasks done by the participants so far as well as the pending ones.",
   "rows" : [
     [

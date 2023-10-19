@@ -3,9 +3,9 @@
   "name" : "expenseReportReviewForm",
   "type" : "form",
   "uuid" : "839d00f0-1588-460c-8f60-507b51cbdee5",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036327172,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103769,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

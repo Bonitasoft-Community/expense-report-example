@@ -17,23 +17,6 @@
     </dependency>
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-dateutil</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.bonitasoft.actorfilter</groupId>
-      <artifactId>bonita-actorfilter-user-manager</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.bonitasoft.actorfilter</groupId>
-      <artifactId>bonita-actorfilter-initiator-manager</artifactId>
-      <version>1.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy</artifactId>
       <scope>provided</scope>
     </dependency>
@@ -91,6 +74,18 @@
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy-servlet</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-user-manager</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-initiator-manager</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>

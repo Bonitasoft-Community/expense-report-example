@@ -3,9 +3,9 @@
   "name" : "expenseReportCreateForm",
   "type" : "form",
   "uuid" : "a3b9cde6-7058-4168-8d95-196a2873a066",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036327132,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103729,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

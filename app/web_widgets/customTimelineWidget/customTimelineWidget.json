@@ -3,9 +3,9 @@
   "name" : "timelineWidget",
   "type" : "widget",
   "custom" : true,
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036326975,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103603,
   "template" : "@customTimelineWidget.tpl.html",
   "controller" : "@customTimelineWidget.ctrl.js",
   "properties" : [

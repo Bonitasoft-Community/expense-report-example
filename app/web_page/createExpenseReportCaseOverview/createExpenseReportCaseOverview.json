@@ -4,9 +4,9 @@
   "displayName" : "createExpenseReportCaseOverview",
   "type" : "page",
   "uuid" : "ad8bc2a1-8c93-42eb-95f3-56e9585afd3c",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036326984,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103607,
   "description" : "List all business data related to the root case. List all the tasks done by the participants so far as well as the pending ones.",
   "rows" : [
     [

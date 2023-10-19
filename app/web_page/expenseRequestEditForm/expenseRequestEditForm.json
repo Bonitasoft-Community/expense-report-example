@@ -3,9 +3,9 @@
   "name" : "expenseRequestEditForm",
   "type" : "form",
   "uuid" : "64a2cb37-b8ab-4495-b357-6545fa2c0104",
-  "modelVersion" : "2.5",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1697036327211,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.5",
+  "lastUpdate" : 1697720103811,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
