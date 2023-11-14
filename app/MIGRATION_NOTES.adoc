@@ -1,0 +1,43 @@
+== Migration notes (October 11, 2023 at 4:58:48 PM CEST)
+
+=== Additions
+
+* Bonita Admin Application has been added in the project extensions.
+
+=== Updates
+
+* `com.company.model:bdm-client:jar:1.0.0` dependency has been replaced with `${project.groupId}:expense-report-example-bdm-model:jar:${project.version}`.
+* The project layout has been changed in favor of a multi modules maven project. It means that files location inside the project have changed.  It is a technical change and will not impact the design usage in Bonita Studio.New maven modules and their respective `pom.xml` files are *reserved for internal Studio use*.
+* Project's Business Data Model is now build in its own maven module. While it does not impact the design usage, it can now be built and deployed independently from a Studio.  The BDM model dependency share the same `version` and `groupId` of the parent project. It is enforced by the format of the Bonita project and must not be changed.
+* `app/.gitignore` file has been updated.
+* This project now depends on the Bonita project parent pom. This parent pom configures all the required plugins and dependencies versions for a given Bonita version.
+* Rest API Extensions and Themes projects have been moved in the project layout to benefit from the Maven multi module approach. It means that files location inside the project have changed.  It is a technical change and will not impact the design usage in Bonita Studio.New maven modules and their respective `pom.xml` files are *reserved for internal Studio use*.
+* Project's extensions are now build in their own maven module. While it does not impact the design usage, this internal change allow the usage of a standard Maven build lifecycle.  All extensions share the same `version` and `groupId` of the parent project. It is enforced by the format of the Bonita project and must not be changed.
+* Application module build configuration has been updated to support Maven build.
+
+=== Removals
+
+* Deprecated provided groovy classes `BonitaUsers`, `BonitaSql`, `BonitaXML` and `BonitaTypes` have been removed.
+
+== Migration notes (October 6, 2022 at 3:18:45 PM CEST)
+
+=== Updates
+
+* `bonita.runtime.version` has been updated from `7.13.0` to `7.15.0`.
+* `bonita-project-maven-plugin.version` has been updated from `0.0.1` to `0.0.6`.
+
+== Migration notes (July 23, 2021 at 11:36:48 AM CEST)
+
+=== Additions
+
+* Bonita projects are now Maven projects and rely on the https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html[Maven dependency mechanism] to manage their dependencies. Check the documentation for more information about https://www.bonitasoft.com/bos_redirect.php?bos_redirect_id=727&bos_redirect_major_version=7.13&bos_redirect_minor_version=0&bos_redirect_product=bos[Project composition].
+
+=== Updates
+
+* Groovy version has been updated from `2.4.x` to `3.0.x`
+* Only Java `11` version is now supported. This might impact your existing projet if you were still using Java 8. Some dependencies in your project might be incompatible with the _Java Platform Module System_ introduced in Java 9.
+
+=== Removals
+
+* `lib` folder and its content has been removed.
+

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+  <process:MainProcess xmi:id="_DSpZ8O_DEeeqC8gnsZzn2Q" name="Create expense report" version="6.0.1" bonitaModelVersion="8">
+    <elements xmi:type="process:Pool" xmi:id="_DSqBAO_DEeeqC8gnsZzn2Q" documentation="This process allow an employee to submit an expense report. Information are stored in the business variable &quot;report&quot;. Report will be reviewed by manager of the employee. If report is rejected, employee can start another process to edit and resubmit it." name="Create expense report" version="6.0.1">
+      <elements xmi:type="process:Lane" xmi:id="_DSqBAe_DEeeqC8gnsZzn2Q" name="Employee lane" actor="_DSqBeu_DEeeqC8gnsZzn2Q">
+        <elements xmi:type="process:StartEvent" xmi:id="_DSqBAu_DEeeqC8gnsZzn2Q" name="Fill report" outgoing="_DSqBau_DEeeqC8gnsZzn2Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_DSqBBO_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_DSqBBe_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_DSqBBu_DEeeqC8gnsZzn2Q" name="" content="" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <elements xmi:type="process:Lane" xmi:id="_DSqBKO_DEeeqC8gnsZzn2Q" name="Manager lane" actor="_4CHPEOBIEemZQPyPcJEEEA">
+        <elements xmi:type="process:CallActivity" xmi:id="_1hZbAOqqEemfe-qAZIUi1w" documentation="This call the &quot;Review expense report&quot; process. It will reuse (no duplication) the expense report created in the current process." name="Start the review process" outgoing="_2XIwMOqqEemfe-qAZIUi1w" incoming="_DSqBau_DEeeqC8gnsZzn2Q">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_1hZbAuqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_1hZbAeqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_1hZbA-qqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_1hZbBuqqEemfe-qAZIUi1w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_1hZbB-qqEemfe-qAZIUi1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_1hZbCOqqEemfe-qAZIUi1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_1hZbCuqqEemfe-qAZIUi1w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_1hZbCeqqEemfe-qAZIUi1w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_1hzqsOqqEemfe-qAZIUi1w" subprocessTarget="expenseReport" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_1hzqseqqEemfe-qAZIUi1w" name="expenseReport" content="expenseReport" type="TYPE_VARIABLE" returnType="com.company.model.ExpenseReport">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_6lIlMOqrEemVR-MSSwBHSg" documentation="The expense report. ExpenseReport business object is a complex object that include a composition with ExpenseReportLine object. It is initialized with data provied by the user when starting the process (see contract definition)." name="expenseReport" dataType="_DSqBmO_DEeeqC8gnsZzn2Q" className="com.company.model.ExpenseReport"/>
+            </processSource>
+          </inputMappings>
+          <calledActivityName xmi:type="expression:Expression" xmi:id="_1hapIOqqEemfe-qAZIUi1w" name="Review expense report" content="Review expense report"/>
+          <calledActivityVersion xmi:type="expression:Expression" xmi:id="_1hZbBeqqEemfe-qAZIUi1w" name="6.0.1" content="6.0.1" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndEvent" xmi:id="_2XD3sOqqEemfe-qAZIUi1w" name="End" incoming="_2XIwMOqqEemfe-qAZIUi1w">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_2XEeweqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_2XEewOqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_2XEewuqqEemfe-qAZIUi1w" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_Nb2MwOBJEemZQPyPcJEEEA" documentation="Assign the tasks to the manager of the employee who submitted the expense report." name="Manager of the employee" definitionId="bonita-actorfilter-initiator-manager" definitionVersion="1.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Nb2MweBJEemZQPyPcJEEEA" definitionId="bonita-actorfilter-initiator-manager" version="1.0" modelVersion="8">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Nb2MwuBJEemZQPyPcJEEEA" key="autoAssign">
+              <expression xmi:type="expression:Expression" xmi:id="_Nb2Mw-BJEemZQPyPcJEEEA" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_DSqBXO_DEeeqC8gnsZzn2Q" documentation="The expense report. ExpenseReport business object is a complex object that include a composition with ExpenseReportLine object. It is initialized with data provied by the user when starting the process (see contract definition)." name="expenseReport" dataType="_DSqBmO_DEeeqC8gnsZzn2Q" className="com.company.model.ExpenseReport">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_DSqBXe_DEeeqC8gnsZzn2Q" name="initReport" content="import java.time.OffsetDateTime&#xA;&#xA;import org.bonitasoft.engine.bpm.process.ProcessInstance;&#xA;&#xA;import com.company.model.ExpenseReport;&#xA;import com.company.model.ExpenseReportLine;&#xA;&#xA;// Get current process instance information&#xA;// We use it to store the id of the user who start the process in the ExpenseReport business variable&#xA;ProcessInstance processInstance = apiAccessor.processAPI.getProcessInstance(processInstanceId)&#xA;&#xA;// Create the new ExpenseReport object&#xA;// Summary is received from the contract&#xA;// isApproved is set by default to false&#xA;// createDate is set with the current date and time&#xA;// createBy is set with the id of the user who start the process&#xA;// approverComments is not set&#xA;// lines attribute is set with the information received from the contract&#xA;ExpenseReport newReport = new ExpenseReport(summary: reportContract?.summary, isApproved: false, creationDate: OffsetDateTime.now(), createdBy: processInstance.startedBy)&#xA;&#xA;newReport.lines = {&#xA;&#x9;def expenseReportLineList = []&#xA;&#x9;//For each item collected in multiple input&#xA;&#x9;reportContract?.lines.each{&#xA;&#x9;&#x9;//Add a new composed ExpenseReportLine instance&#xA;&#x9;&#x9;expenseReportLineList.add({ currentExpenseReportLineInput ->&#xA;&#x9;&#x9;&#x9;def expenseReportLineVar = new com.company.model.ExpenseReportLine()&#xA;&#x9;&#x9;&#x9;expenseReportLineVar.label = currentExpenseReportLineInput.label&#xA;&#x9;&#x9;&#x9;expenseReportLineVar.cost = currentExpenseReportLineInput.cost&#xA;&#x9;&#x9;&#x9;return expenseReportLineVar&#xA;&#x9;&#x9;}(it))&#xA;&#x9;}&#xA;&#x9;return expenseReportLineList}()&#xA;&#xA;return newReport&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.ExpenseReport">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_CC1bMOBLEemZQPyPcJEEEA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_CC1bMeBLEemZQPyPcJEEEA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_CC1bMuBLEemZQPyPcJEEEA" name="reportContract" type="COMPLEX"/>
+        </defaultValue>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_DSqBZO_DEeeqC8gnsZzn2Q">
+        <targetForm xmi:type="expression:Expression" xmi:id="_DSqBZe_DEeeqC8gnsZzn2Q" name="expenseReportCreateForm" content="a3b9cde6-7058-4168-8d95-196a2873a066" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_DSqBZ-_DEeeqC8gnsZzn2Q">
+        <targetForm xmi:type="expression:Expression" xmi:id="_DSqBaO_DEeeqC8gnsZzn2Q" name="createExpenseReportCaseOverview" content="ad8bc2a1-8c93-42eb-95f3-56e9585afd3c" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_DSqBau_DEeeqC8gnsZzn2Q" target="_1hZbAOqqEemfe-qAZIUi1w" source="_DSqBAu_DEeeqC8gnsZzn2Q">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_DSqBa-_DEeeqC8gnsZzn2Q"/>
+        <condition xmi:type="expression:Expression" xmi:id="_DSqBbO_DEeeqC8gnsZzn2Q" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_2XIwMOqqEemfe-qAZIUi1w" target="_2XD3sOqqEemfe-qAZIUi1w" source="_1hZbAOqqEemfe-qAZIUi1w">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_2XJXQOqqEemfe-qAZIUi1w"/>
+        <condition xmi:type="expression:Expression" xmi:id="_2XJXQeqqEemfe-qAZIUi1w" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_DSqBeu_DEeeqC8gnsZzn2Q" documentation="Employee who will submit the expense report." name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_4CHPEOBIEemZQPyPcJEEEA" documentation="Manager who will review the expense report. Actor is actually override by an actor filter that select the employee manager." name="Manager actor"/>
+      <contract xmi:type="process:Contract" xmi:id="_DSqBe-_DEeeqC8gnsZzn2Q">
+        <inputs xmi:type="process:ContractInput" xmi:id="_DSqBfO_DEeeqC8gnsZzn2Q" name="reportContract" type="COMPLEX">
+          <inputs xmi:type="process:ContractInput" xmi:id="_DSqBfe_DEeeqC8gnsZzn2Q" name="summary"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_DSqBfu_DEeeqC8gnsZzn2Q" name="lines" type="COMPLEX" multiple="true">
+            <inputs xmi:type="process:ContractInput" xmi:id="_DSqBf-_DEeeqC8gnsZzn2Q" name="label"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_DSqBgO_DEeeqC8gnsZzn2Q" name="cost" type="DECIMAL"/>
+          </inputs>
+        </inputs>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_NNqqAOBNEemZQPyPcJEEEA" expression="!reportContract.lines.empty" errorMessage="You should at least add one line in your expense report" name="minimum one line">
+          <inputNames>reportContract</inputNames>
+        </constraints>
+      </contract>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_DSqBge_DEeeqC8gnsZzn2Q">
+        <name xmi:type="expression:Expression" xmi:id="_DSqBgu_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_DSqBg-_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_DSqBhO_DEeeqC8gnsZzn2Q">
+        <name xmi:type="expression:Expression" xmi:id="_DSqBhe_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_DSqBhu_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_DSqBh-_DEeeqC8gnsZzn2Q">
+        <name xmi:type="expression:Expression" xmi:id="_DSqBiO_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_DSqBie_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_DSqBiu_DEeeqC8gnsZzn2Q">
+        <name xmi:type="expression:Expression" xmi:id="_DSqBi-_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_DSqBjO_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_DSqBje_DEeeqC8gnsZzn2Q">
+        <name xmi:type="expression:Expression" xmi:id="_DSqBju_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_DSqBj-_DEeeqC8gnsZzn2Q" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_DSqBkO_DEeeqC8gnsZzn2Q" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_DSqBke_DEeeqC8gnsZzn2Q" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_DSqBku_DEeeqC8gnsZzn2Q" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_DSqBk-_DEeeqC8gnsZzn2Q" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_DSqBlO_DEeeqC8gnsZzn2Q" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_DSqBle_DEeeqC8gnsZzn2Q" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_DSqBlu_DEeeqC8gnsZzn2Q" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_DSqBl-_DEeeqC8gnsZzn2Q" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_DSqBmO_DEeeqC8gnsZzn2Q" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_DSqBme_DEeeqC8gnsZzn2Q" type="Process" element="_DSpZ8O_DEeeqC8gnsZzn2Q" name="MyDiagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_DSqBmu_DEeeqC8gnsZzn2Q" type="2007" element="_DSqBAO_DEeeqC8gnsZzn2Q">
+      <children xmi:type="notation:DecorationNode" xmi:id="_DSqBm-_DEeeqC8gnsZzn2Q" type="5008" element="_DSqBAO_DEeeqC8gnsZzn2Q"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_DSqBnO_DEeeqC8gnsZzn2Q" type="7001" element="_DSqBAO_DEeeqC8gnsZzn2Q">
+        <children xmi:type="notation:Node" xmi:id="_DSqBne_DEeeqC8gnsZzn2Q" type="3007" element="_DSqBAe_DEeeqC8gnsZzn2Q">
+          <children xmi:type="notation:DecorationNode" xmi:id="_DSqBnu_DEeeqC8gnsZzn2Q" type="5007" element="_DSqBAe_DEeeqC8gnsZzn2Q"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_DSqBn-_DEeeqC8gnsZzn2Q" type="7002" element="_DSqBAe_DEeeqC8gnsZzn2Q">
+            <children xmi:type="notation:Shape" xmi:id="_DSqBoO_DEeeqC8gnsZzn2Q" type="3002" element="_DSqBAu_DEeeqC8gnsZzn2Q" fontName="Ubuntu">
+              <children xmi:type="notation:DecorationNode" xmi:id="_DSqBoe_DEeeqC8gnsZzn2Q" type="5024" element="_DSqBAu_DEeeqC8gnsZzn2Q">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DSqBou_DEeeqC8gnsZzn2Q" y="-64"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DSqBo-_DEeeqC8gnsZzn2Q" x="60" y="68"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_DSqBp-_DEeeqC8gnsZzn2Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_DSqBqO_DEeeqC8gnsZzn2Q" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_DSqBqe_DEeeqC8gnsZzn2Q"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_DSqBqu_DEeeqC8gnsZzn2Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DSqBq-_DEeeqC8gnsZzn2Q" x="45" y="10" width="978" height="161"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_DSqBrO_DEeeqC8gnsZzn2Q" type="3007" element="_DSqBKO_DEeeqC8gnsZzn2Q">
+          <children xmi:type="notation:DecorationNode" xmi:id="_DSqBre_DEeeqC8gnsZzn2Q" type="5007" element="_DSqBKO_DEeeqC8gnsZzn2Q"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_DSqBru_DEeeqC8gnsZzn2Q" type="7002" element="_DSqBKO_DEeeqC8gnsZzn2Q">
+            <children xmi:type="notation:Shape" xmi:id="_1haCEOqqEemfe-qAZIUi1w" type="3063" element="_1hZbAOqqEemfe-qAZIUi1w" fontName="Noto Sans" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_1haCEuqqEemfe-qAZIUi1w" type="5093" element="_1hZbAOqqEemfe-qAZIUi1w"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1haCEeqqEemfe-qAZIUi1w" x="160" y="79" width="186" height="93"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_2XFF0OqqEemfe-qAZIUi1w" type="3003" element="_2XD3sOqqEemfe-qAZIUi1w" fontName="Noto Sans">
+              <children xmi:type="notation:DecorationNode" xmi:id="_2XFs4OqqEemfe-qAZIUi1w" type="5025" element="_2XD3sOqqEemfe-qAZIUi1w">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_2XFs4eqqEemfe-qAZIUi1w" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2XFF0eqqEemfe-qAZIUi1w" x="412" y="86"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_DSqBuu_DEeeqC8gnsZzn2Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_DSqBu-_DEeeqC8gnsZzn2Q" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_DSqBvO_DEeeqC8gnsZzn2Q"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_DSqBve_DEeeqC8gnsZzn2Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DSqBvu_DEeeqC8gnsZzn2Q" x="48" y="161" width="854" height="235"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_DSqBv-_DEeeqC8gnsZzn2Q"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_DSqBwO_DEeeqC8gnsZzn2Q" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_DSqBwe_DEeeqC8gnsZzn2Q"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_DSqBwu_DEeeqC8gnsZzn2Q"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DSqBw-_DEeeqC8gnsZzn2Q" width="877" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_DSqBxO_DEeeqC8gnsZzn2Q"/>
+    <edges xmi:type="notation:Connector" xmi:id="_DSqBxe_DEeeqC8gnsZzn2Q" type="4001" element="_DSqBau_DEeeqC8gnsZzn2Q" source="_DSqBoO_DEeeqC8gnsZzn2Q" target="_1haCEOqqEemfe-qAZIUi1w" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_DSqBxu_DEeeqC8gnsZzn2Q" type="6001" element="_DSqBau_DEeeqC8gnsZzn2Q">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_DSqBx-_DEeeqC8gnsZzn2Q" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_DSqByO_DEeeqC8gnsZzn2Q" fontName="Ubuntu"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DSqBye_DEeeqC8gnsZzn2Q" points="[-1, 14, -136, -132]$[-1, 153, -136, 7]$[85, 153, -50, 7]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_2XJ-UOqqEemfe-qAZIUi1w" type="4001" element="_2XIwMOqqEemfe-qAZIUi1w" source="_1haCEOqqEemfe-qAZIUi1w" target="_2XFF0OqqEemfe-qAZIUi1w" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_2XJ-U-qqEemfe-qAZIUi1w" type="6001" element="_2XIwMOqqEemfe-qAZIUi1w">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2XJ-VOqqEemfe-qAZIUi1w" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_2XJ-UeqqEemfe-qAZIUi1w" fontName="Noto Sans"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2XJ-UuqqEemfe-qAZIUi1w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
