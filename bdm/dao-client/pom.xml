@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bonitasoft.example</groupId>
     <artifactId>expense-report-example-bdm-parent</artifactId>
-    <version>7.0.0-SNAPSHOT</version>
+    <version>7.0.0</version>
   </parent>
   <artifactId>expense-report-example-bdm-dao-client</artifactId>
   <dependencies>
